@@ -1,0 +1,24 @@
+let nfts=[];
+function mintNFT(name,uid,position,cgpa){
+    const nft={
+        name: name,
+        uid: uid,
+        position: position,
+        cgpa: cgpa
+    };
+     nfts.push(nft);
+}
+function listNFT(){
+    for(i=0;i<nfts.length;i++){
+     console.log(`Name: ${nfts[i].name},uid: ${nfts[i].uid}, position: ${nfts[i].position}, cgpa: ${nfts[i].cgpa}`);
+    }
+}
+function getTotalSupply(){
+    return nfts.length;
+}
+mintNFT("KSHITIZ","22BCS16032","CR",7.6);
+mintNFT("RIKESH","22BCS16067","HEADBOY",7.2);
+mintNFT("HARJOT","22BCS16214","STUDENT",7.14);
+mintNFT("KESHAV","22BCS17676","CR",7.7);
+listNFT();
+console.log("total no. of supplies "  + getTotalSupply());
